@@ -1,3 +1,31 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+  <!--Hidden charts-->
+
+  <!-- If you want to see the chart, set visibility to "visible" -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button (click)="downloadChart()">Download pie chart as PDF</button>
+      </div>
+    </div>
+
+      <div id="chart" style="visibility: visible">
+        <ngx-charts-pie-chart
+          [view]="[800, 500]"
+          [results]="single"
+          [legend]="true"
+          [explodeSlices]="false"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+        <ngx-charts-pie-chart
+        [view]="[800, 500]"
+        [results]="single"
+        [legend]="true"
+        [explodeSlices]="false"
+        [labels]="true"
+        [doughnut]="false">
+      </ngx-charts-pie-chart>
+      </div>
+
+
+

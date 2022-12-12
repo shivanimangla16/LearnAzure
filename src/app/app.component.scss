@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+#my-node {
+  font-weight: bold;
+}
+#my-node-child {
+  border: 1px solid lightgrey;
+  padding: 1em;
+}
+#chart {
+  height: 1000px;
+  width: 845px;
+}
