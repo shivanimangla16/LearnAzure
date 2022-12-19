@@ -4,7 +4,6 @@ import * as htmlToImage from 'html-to-image';
 import { NgxService } from './services/ngx.service';
 import { LegendPosition } from '@swimlane/ngx-charts';
 var pdfMake = require('pdfmake/build/pdfmake');
-// var pdfFonts = require('pdfmake/build/vfs_fonts');
 
 @Component({
   selector: 'app-root',
@@ -70,9 +69,7 @@ export class AppComponent {
       if (base64ImageStr != '') {
          this.base64StringArray!.push(base64ImageStr);
       }
-      // console.log("mangla");
     console.log(this.base64StringArray!.length);
-
   }
 
   async getPdf() {
