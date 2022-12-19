@@ -1,31 +1,41 @@
-  <!--Hidden charts-->
-
-  <!-- If you want to see the chart, set visibility to "visible" -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <button (click)="downloadChart()">Download pie chart as PDF</button>
-      </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <button (click)="downloadChart()">Download pie chart as PDF</button>
     </div>
-
-      <div id="chart" style="visibility: visible">
-        <ngx-charts-pie-chart
-          [view]="[800, 500]"
-          [results]="single"
-          [legend]="true"
-          [explodeSlices]="false"
-          [labels]="true"
-          [doughnut]="false">
-        </ngx-charts-pie-chart>
-        <ngx-charts-pie-chart
-        [view]="[800, 500]"
-        [results]="single"
-        [legend]="true"
-        [explodeSlices]="false"
-        [labels]="true"
-        [doughnut]="false">
-      </ngx-charts-pie-chart>
-      </div>
-
-
-
+  </div>
+  <div
+    class="row"
+    id="chart"
+    style="visibility: visible; background-color: cadetblue"
+  >
+    <ngx-charts-pie-chart
+      [view]="[800, 500]"
+      [results]="single"
+      [legend]="true"
+      [legendTitle]="title"
+      [explodeSlices]="false"
+      [legendPosition]="below"
+      [labels]="true"
+      [doughnut]="false"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+  <div
+    class="row"
+    id="chart2"
+    style="visibility: visible"
+  >
+    <ngx-charts-pie-chart
+      [view]="[800, 500]"
+      [results]="single"
+      [legend]="true"
+      [legendTitle]="title"
+      [explodeSlices]="false"
+      [legendPosition]="below"
+      [labels]="true"
+      [doughnut]="false"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+</div>
